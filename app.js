@@ -74,7 +74,7 @@ const expenseSchema = new mongoose.Schema({
 
 const Expenses = mongoose.model("Expenses", expenseSchema);
 
-app.get("/api/expenses", authMiddleware, async (req, res) => {
+app.get("/api/expenses", async (req, res) => {
   try {
     const expenses = await Expenses.find();
     res.status(200).json(expenses);
