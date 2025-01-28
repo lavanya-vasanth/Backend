@@ -11,10 +11,10 @@ app.use(cors()); //Middleware to enable CORS
 //To avoid cross origin resource sharing error which means the frontend and backend should be in the same domain
 const { v4: uuidv4 } = require("uuid"); //to generate id automatically in the backend
 
-//Connecting mongodb database
-mongoose.connect("mongodb://localhost:27017/expenses").then(() => {
-  console.log("Connected to database");
+mongoose.connect("mongodb+srv://lavanyav2023cce:lavi1515@cluster0.lfyvjqo.mongodb.net/expenses").then(()=>{
+  console.log("Connected to database");
 });
+
 
 const userSchema = new mongoose.Schema({
   id: String,
